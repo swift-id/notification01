@@ -12,9 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
+    @IBAction func onTimerTapped() {
+        print("Timer")
+    }
+    
+    @IBAction func onDateTapped() {
+        print("Date")
+    }
+    
+    @IBAction func onLocationTapped() {
+        print("Location")
+    }
 
 }
 

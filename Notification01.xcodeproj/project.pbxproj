@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A54CB6E23095CC900C9CB4E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54CB6D23095CC900C9CB4E /* AlertService.swift */; };
 		4AC81B40230232C3007C7C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC81B3F230232C3007C7C94 /* AppDelegate.swift */; };
 		4AC81B42230232C3007C7C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC81B41230232C3007C7C94 /* ViewController.swift */; };
 		4AC81B45230232C3007C7C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC81B43230232C3007C7C94 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A54CB6D23095CC900C9CB4E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		4AC81B3C230232C3007C7C94 /* Notification01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notification01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC81B3F230232C3007C7C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC81B41230232C3007C7C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC81B6123023C7F007C7C94 /* UNService.swift */,
+				4A54CB6D23095CC900C9CB4E /* AlertService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				4AC81B42230232C3007C7C94 /* ViewController.swift in Sources */,
 				4AC81B6223023C7F007C7C94 /* UNService.swift in Sources */,
 				4AC81B40230232C3007C7C94 /* AppDelegate.swift in Sources */,
+				4A54CB6E23095CC900C9CB4E /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

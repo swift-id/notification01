@@ -23,11 +23,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDateTapped() {
-        var components = DateComponents()
-        
-        components.second = 5
-        
-        UNService.shared.requestDate(with: components)
+        AlertService.actionSheet(in: self, title: "For the seconds of 5 every minute") {
+            var components = DateComponents()
+            
+            components.second = 5
+            
+            UNService.shared.requestDate(with: components)
+        }
     }
     
     @IBAction func onLocationTapped() {

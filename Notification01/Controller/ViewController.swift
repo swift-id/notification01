@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         
         UNService.shared.authorize()
         CLService.shared.authorize()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didEnterRegion),
+                                               name: NSNotification.Name("notification.enteredRegion"),
+                                               object: nil)
     }
 
     @IBAction func onTimerTapped() {
@@ -37,6 +42,11 @@ class ViewController: UIViewController {
         AlertService.actionSheet(in: self, title: "When I come back") {
             CLService.shared.updateLocation()
         }
+    }
+    
+    @objc
+    func didEnterRegion() {
+        UNService.shared.requestLocation()
     }
 
 }

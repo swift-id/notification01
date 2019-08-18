@@ -21,7 +21,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDateTapped() {
-        print("Date")
+        var components = DateComponents()
+        
+        components.second = 5
+        
+        UNService.shared.requestDate(with: components)
     }
     
     @IBAction func onLocationTapped() {

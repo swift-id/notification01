@@ -52,7 +52,16 @@ class UNService: NSObject {
     }
     
     func requestDate(with components: DateComponents) {
-        //
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Date Wohoo!"
+        content.body  = "We are in the future now."
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "UN.date", content: content, trigger: trigger)
+        
+        unCenter.add(request)
     }
     
     func requestLocation() {

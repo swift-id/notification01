@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTimerTapped() {
-        print("Timer")
+        UNService.shared.requestTimer(with: 3)
     }
     
     @IBAction func onDateTapped() {

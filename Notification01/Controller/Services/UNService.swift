@@ -36,6 +36,29 @@ class UNService: NSObject {
         unCenter.delegate = self
     }
     
+    func requestTimer(with interval: TimeInterval) {
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Timer Yay!"
+        content.body  = "Your timer notification is all done."
+        content.sound = .default
+        content.badge = 99
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "UN.timer", content: content, trigger: trigger)
+        
+        unCenter.add(request)
+    }
+    
+    func requestDate(with components: DateComponents) {
+        //
+    }
+    
+    func requestLocation() {
+        //
+    }
+    
 }
 
 extension UNService: UNUserNotificationCenterDelegate {

@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTimerTapped() {
-        UNService.shared.requestTimer(with: 3)
+        AlertService.actionSheet(in: self, title: "3 seconds") {
+            UNService.shared.requestTimer(with: 3)
+        }
     }
     
     @IBAction func onDateTapped() {

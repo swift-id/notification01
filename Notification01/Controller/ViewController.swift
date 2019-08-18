@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         UNService.shared.authorize()
+        CLService.shared.authorize()
     }
 
     @IBAction func onTimerTapped() {
@@ -33,7 +34,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onLocationTapped() {
-        print("Location")
+        AlertService.actionSheet(in: self, title: "When I come back") {
+            CLService.shared.updateLocation()
+        }
     }
 
 }

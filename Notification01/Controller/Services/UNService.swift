@@ -158,6 +158,11 @@ extension UNService: UNUserNotificationCenterDelegate {
         
         print("User Notification received response")
         
+        if let action = NotificationActions(rawValue: response.actionIdentifier) {
+            NotificationCenter.default.post(name: NSNotification.Name("notification.handleAction"),
+                                            object: action)
+        }
+        
         completionHandler()
     }
     

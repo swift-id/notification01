@@ -20,6 +20,11 @@ class ViewController: UIViewController {
                                                selector: #selector(didEnterRegion),
                                                name: NSNotification.Name("notification.enteredRegion"),
                                                object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleAction(_:)),
+                                               name: NSNotification.Name("notification.handleAction"),
+                                               object: nil)
     }
 
     @IBAction func onTimerTapped() {
@@ -47,6 +52,20 @@ class ViewController: UIViewController {
     @objc
     func didEnterRegion() {
         UNService.shared.requestLocation()
+    }
+    
+    @objc
+    func handleAction(_ sender: Notification) {
+        guard let action = sender.object as? NotificationActions else { return }
+        
+        switch action {
+        case .timer:
+            print("Timer notif logic is now running")
+        case .date:
+            print("Date notif logic is now running")
+        case .location:
+            print("Location notif logic is now running")
+        }
     }
 
 }

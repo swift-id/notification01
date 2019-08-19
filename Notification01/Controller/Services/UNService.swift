@@ -34,6 +34,42 @@ class UNService: NSObject {
     
     func configure() {
         unCenter.delegate = self
+        
+        setupAction()
+    }
+    
+    func setupAction() {
+        // Action for Timer notification
+        
+        let timerAction =  UNNotificationAction(identifier: NotificationActionTypes.timer.rawValue,
+                                                title: "Timer action here",
+                                                options: [.authenticationRequired])
+        
+        let timerCategory = UNNotificationCategory(identifier: NotificationCategories.timer.rawValue,
+                                                   actions: [timerAction],
+                                                   intentIdentifiers: [])
+        
+        // Action for Date notification
+        
+        let dateAction =  UNNotificationAction(identifier: NotificationActionTypes.date.rawValue,
+                                               title: "Date action here",
+                                               options: [.destructive])
+        
+        let dateCategory = UNNotificationCategory(identifier: NotificationCategories.date.rawValue,
+                                                  actions: [dateAction],
+                                                  intentIdentifiers: [])
+        
+        // Action for Location notification
+        
+        let locationAction =  UNNotificationAction(identifier: NotificationActionTypes.location.rawValue,
+                                                   title: "Location action here",
+                                                   options: [.foreground])
+        
+        let locationCategory = UNNotificationCategory(identifier: NotificationCategories.location.rawValue,
+                                                      actions: [locationAction],
+                                                      intentIdentifiers: [])
+        
+        unCenter.setNotificationCategories([timerCategory, dateCategory, locationCategory])
     }
     
     func getImage(for type: NotificationImageTypes) -> UNNotificationAttachment? {
@@ -68,6 +104,8 @@ class UNService: NSObject {
             content.attachments = [attachment]
         }
         
+        content.categoryIdentifier = NotificationCategories.timer.rawValue
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         
         let request = UNNotificationRequest(identifier: "UN.timer", content: content, trigger: trigger)
@@ -85,6 +123,8 @@ class UNService: NSObject {
             content.attachments = [attachment]
         }
         
+        content.categoryIdentifier = NotificationCategories.date.rawValue
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         
         let request = UNNotificationRequest(identifier: "UN.date", content: content, trigger: trigger)
@@ -101,6 +141,8 @@ class UNService: NSObject {
         if let attachment = getImage(for: .location) {
             content.attachments = [attachment]
         }
+        
+        content.categoryIdentifier = NotificationCategories.location.rawValue
         
         let request = UNNotificationRequest(identifier: "UN.location", content: content, trigger: nil)
         

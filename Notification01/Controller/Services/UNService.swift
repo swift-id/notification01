@@ -36,6 +36,26 @@ class UNService: NSObject {
         unCenter.delegate = self
     }
     
+    func getImage(for type: NotificationImageTypes) -> UNNotificationAttachment? {
+        var imageName: String
+        
+        switch type {
+        case .timer: imageName = "TimerAlert"
+        case .date: imageName = "DateAlert"
+        case .location: imageName = "LocationAlert"
+        }
+        
+        guard let url = Bundle.main.url(forResource: imageName, withExtension: "png") else { return nil }
+        
+        do {
+            let image = try UNNotificationAttachment(identifier: type.rawValue, url: url)
+            
+            return image
+        } catch {
+            return nil
+        }
+    }
+    
     func requestTimer(with interval: TimeInterval) {
         let content = UNMutableNotificationContent()
         
@@ -43,6 +63,10 @@ class UNService: NSObject {
         content.body  = "Your timer notification is all done."
         content.sound = .default
         content.badge = 99
+        
+        if let attachment = getImage(for: .timer) {
+            content.attachments = [attachment]
+        }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         
@@ -57,6 +81,10 @@ class UNService: NSObject {
         content.title = "Date Wohoo!"
         content.body  = "We are in the future now."
         
+        if let attachment = getImage(for: .date) {
+            content.attachments = [attachment]
+        }
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         
         let request = UNNotificationRequest(identifier: "UN.date", content: content, trigger: trigger)
@@ -69,6 +97,10 @@ class UNService: NSObject {
         
         content.title = "Location Wkwk!"
         content.body  = "Welcome back."
+        
+        if let attachment = getImage(for: .location) {
+            content.attachments = [attachment]
+        }
         
         let request = UNNotificationRequest(identifier: "UN.location", content: content, trigger: nil)
         

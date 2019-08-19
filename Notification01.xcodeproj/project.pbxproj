@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A54CB6E23095CC900C9CB4E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54CB6D23095CC900C9CB4E /* AlertService.swift */; };
-		4A952E00230A1D1200C5706D /* NotificationImageTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952DFF230A1D1200C5706D /* NotificationImageTypes.swift */; };
-		4A952E02230A226400C5706D /* NotificationActionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952E01230A226400C5706D /* NotificationActionTypes.swift */; };
+		4A952E00230A1D1200C5706D /* NotificationImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952DFF230A1D1200C5706D /* NotificationImages.swift */; };
+		4A952E02230A226400C5706D /* NotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952E01230A226400C5706D /* NotificationActions.swift */; };
 		4A952E04230A243900C5706D /* NotificationCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952E03230A243900C5706D /* NotificationCategories.swift */; };
 		4AA7F9182309EF4C00DD3A6D /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7F9172309EF4C00DD3A6D /* CLService.swift */; };
 		4AC81B40230232C3007C7C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC81B3F230232C3007C7C94 /* AppDelegate.swift */; };
@@ -26,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		4A54CB6D23095CC900C9CB4E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
-		4A952DFF230A1D1200C5706D /* NotificationImageTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationImageTypes.swift; sourceTree = "<group>"; };
-		4A952E01230A226400C5706D /* NotificationActionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationActionTypes.swift; sourceTree = "<group>"; };
+		4A952DFF230A1D1200C5706D /* NotificationImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationImages.swift; sourceTree = "<group>"; };
+		4A952E01230A226400C5706D /* NotificationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationActions.swift; sourceTree = "<group>"; };
 		4A952E03230A243900C5706D /* NotificationCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCategories.swift; sourceTree = "<group>"; };
 		4AA7F9172309EF4C00DD3A6D /* CLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
 		4AC81B3C230232C3007C7C94 /* Notification01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notification01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +85,9 @@
 		4AC81B51230232D5007C7C94 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A952DFF230A1D1200C5706D /* NotificationImageTypes.swift */,
+				4A952DFF230A1D1200C5706D /* NotificationImages.swift */,
 				4A952E03230A243900C5706D /* NotificationCategories.swift */,
-				4A952E01230A226400C5706D /* NotificationActionTypes.swift */,
+				4A952E01230A226400C5706D /* NotificationActions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,9 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A952E00230A1D1200C5706D /* NotificationImageTypes.swift in Sources */,
+				4A952E00230A1D1200C5706D /* NotificationImages.swift in Sources */,
 				4AA7F9182309EF4C00DD3A6D /* CLService.swift in Sources */,
-				4A952E02230A226400C5706D /* NotificationActionTypes.swift in Sources */,
+				4A952E02230A226400C5706D /* NotificationActions.swift in Sources */,
 				4AC81B552302355D007C7C94 /* ShadowView.swift in Sources */,
 				4AC81B42230232C3007C7C94 /* ViewController.swift in Sources */,
 				4AC81B6223023C7F007C7C94 /* UNService.swift in Sources */,

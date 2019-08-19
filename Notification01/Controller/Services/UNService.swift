@@ -41,7 +41,7 @@ class UNService: NSObject {
     func setupAction() {
         // Action for Timer notification
         
-        let timerAction =  UNNotificationAction(identifier: NotificationActionTypes.timer.rawValue,
+        let timerAction =  UNNotificationAction(identifier: NotificationActions.timer.rawValue,
                                                 title: "Timer action here",
                                                 options: [.authenticationRequired])
         
@@ -51,7 +51,7 @@ class UNService: NSObject {
         
         // Action for Date notification
         
-        let dateAction =  UNNotificationAction(identifier: NotificationActionTypes.date.rawValue,
+        let dateAction =  UNNotificationAction(identifier: NotificationActions.date.rawValue,
                                                title: "Date action here",
                                                options: [.destructive])
         
@@ -61,7 +61,7 @@ class UNService: NSObject {
         
         // Action for Location notification
         
-        let locationAction =  UNNotificationAction(identifier: NotificationActionTypes.location.rawValue,
+        let locationAction =  UNNotificationAction(identifier: NotificationActions.location.rawValue,
                                                    title: "Location action here",
                                                    options: [.foreground])
         
@@ -72,7 +72,7 @@ class UNService: NSObject {
         unCenter.setNotificationCategories([timerCategory, dateCategory, locationCategory])
     }
     
-    func getImage(for type: NotificationImageTypes) -> UNNotificationAttachment? {
+    func getImage(for type: NotificationImages) -> UNNotificationAttachment? {
         var imageName: String
         
         switch type {
@@ -155,12 +155,16 @@ extension UNService: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        
         print("User Notification received response")
         
         completionHandler()
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
         print("User Notification will present")
         
         let options: UNNotificationPresentationOptions = [.alert, .sound]

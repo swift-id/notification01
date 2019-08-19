@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onDateTapped() {
-        AlertService.actionSheet(in: self, title: "For the seconds of 5 every minute") {
+        AlertService.actionSheet(in: self, title: "5th second of every minute") {
             var components = DateComponents()
             
             components.second = 5

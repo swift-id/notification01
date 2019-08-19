@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum NotificationImageTypes: String {
+enum NotificationImages: String {
     case timer = "UN.timer.image"
     case date = "UN.date.image"
     case location = "UN.location.image"

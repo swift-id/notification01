@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum NotificationActionTypes: String {
+enum NotificationActions: String {
     case timer = "UN.timer.action"
     case date = "UN.date.action"
     case location = "UN.location.action"

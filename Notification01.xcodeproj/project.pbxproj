@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A54CB6E23095CC900C9CB4E /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54CB6D23095CC900C9CB4E /* AlertService.swift */; };
+		4A6858D1230F526F00EA1065 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A6858D0230F526F00EA1065 /* README.md */; };
 		4A952E00230A1D1200C5706D /* NotificationImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952DFF230A1D1200C5706D /* NotificationImages.swift */; };
 		4A952E02230A226400C5706D /* NotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952E01230A226400C5706D /* NotificationActions.swift */; };
 		4A952E04230A243900C5706D /* NotificationCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A952E03230A243900C5706D /* NotificationCategories.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		4A54CB6D23095CC900C9CB4E /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		4A6858D0230F526F00EA1065 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		4A952DFF230A1D1200C5706D /* NotificationImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationImages.swift; sourceTree = "<group>"; };
 		4A952E01230A226400C5706D /* NotificationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationActions.swift; sourceTree = "<group>"; };
 		4A952E03230A243900C5706D /* NotificationCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCategories.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC81B4B230232C5007C7C94 /* Info.plist */,
+				4A6858D0230F526F00EA1065 /* README.md */,
 				4AC81B51230232D5007C7C94 /* Model */,
 				4AC81B52230232E2007C7C94 /* View */,
 				4AC81B5323023306007C7C94 /* Controller */,
@@ -219,6 +222,7 @@
 				4AC81B4A230232C5007C7C94 /* LaunchScreen.storyboard in Resources */,
 				4AC81B47230232C5007C7C94 /* Assets.xcassets in Resources */,
 				4AC81B5D230239EC007C7C94 /* LocationAlert.png in Resources */,
+				4A6858D1230F526F00EA1065 /* README.md in Resources */,
 				4AC81B45230232C3007C7C94 /* Main.storyboard in Resources */,
 				4AC81B5E230239EC007C7C94 /* DateAlert.png in Resources */,
 				4AC81B5C230239EC007C7C94 /* TimerAlert.png in Resources */,
